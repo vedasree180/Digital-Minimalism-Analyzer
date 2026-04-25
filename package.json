@@ -1,0 +1,17 @@
+{
+  "name": "digital-minimalism-analyzer",
+  "version": "1.0.0",
+  "description": "Intelligent Screen Habit & Behavior Analysis System",
+  "scripts": {
+    "install:all": "cd frontend && npm install && cd ../backend && npm install",
+    "dev:frontend": "cd frontend && npm run dev",
+    "dev:backend": "cd backend && npm run dev",
+    "dev:ml": "cd ml && python app.py",
+    "train:ml": "cd ml && python train.py",
+    "start": "concurrently \"npm run dev:frontend\" \"npm run dev:backend\"",
+    "setup": "npm run install:all && echo '\\n✅ Dependencies installed! Now:\\n1. cd ml && pip install -r requirements.txt\\n2. python train.py\\n3. npm start'"
+  },
+  "devDependencies": {
+    "concurrently": "^8.2.2"
+  }
+}
